@@ -29,9 +29,7 @@ export default {
     this.$http.get('/livros')
       .then(response => {
 
-        const livros = response.data
-
-        console.log(livros)
+        this.livros = response.data
 
       })
 
