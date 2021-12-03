@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Feriados from '../views/Feriados.vue'
+import Livros from '../views/Livros.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/feriados',
     name: 'Feriados',
     component: Feriados
+  },
+  {
+    path: '/livros',
+    name: 'Livros',
+    component: Livros
   },
   {
     path: '/about',
