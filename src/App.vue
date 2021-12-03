@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/about">CADASTRO DE LIVROS</router-link> |
       <router-link to="/feriados">Feriados nacionais</router-link> |
+      <router-link to="/livros">Listar livros</router-link> |
       <router-link to="/">ESTANTE DE LIVROS</router-link> 
     </div>
     <router-view/>
