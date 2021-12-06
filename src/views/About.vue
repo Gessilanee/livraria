@@ -1,18 +1,17 @@
 <template>
-    <form method="POST" action="">
-    <div id="idDiv">   
-        <h5>Digite um livro:</h5>     
-        <input v-model="id" placeholder="Digite um id de um livro" >        
+<form action="" method="post">
+    <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="name"/>
     </div>
-    <div class="submit">
-        <v-btn text small color="primary" @click="buscar()"> Adicionar</v-btn>
+    <div>
+        <label for="email">Autor:</label>
+        <input type="text" id="author" name="author"/>
     </div>
-
-    <ul>
-      <li>Nome : {{livro.name}}</li>
-      <li>autor : {{livro.author}}</li>
-    </ul>
-
+    <div>
+        <label for="msg">Descrição:</label>
+        <textarea id="description" name="description"></textarea>
+    </div>
 </form>
 </template>
 
