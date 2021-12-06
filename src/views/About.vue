@@ -12,6 +12,7 @@
         <label for="msg">Descrição:</label>
         <textarea id="description" name="description"></textarea>
     </div>
+    <input type="button" value="Enviar" onclick="msg()">
 </form>
 </template>
 
