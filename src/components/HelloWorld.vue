@@ -14,18 +14,18 @@
                 v-for="(book, i) in HelloWorld"
                 :key="i"
                 cols="12"
-                md="3"
+                md="4"
                 lg="2"
                 >
                 <v-card class="mx-auto">
                     <v-card-title>{{ book.name }}</v-card-title>
                     <v-card-text>Autor:{{ book.author }}
-                                 Descrição:{{ book.description }}
+                                 Descrição:{{ book.description | truncate 50 }}
                     </v-card-text>
                     
 
                         <v-card-actions>
-                            <v-btn text small color="primary"> Ver detalhes </v-btn>
+                            <v-btn text small color="primary" @click="deletelivro(book.id)"> Excluir </v-btn>
                         </v-card-actions>
                 </v-card>  
              </v-col>
@@ -45,9 +45,24 @@
         const response = await fetch(
             "http://localhost:3000/livros"
         );
-      const data = await response.json();
-      return data
-    },
+        const data = await response.json();
+        return data
+        },
+
+
+         async deletelivro(id){
+             const req = await fetch(`http://localhost:3000/livros/${id}`,{
+                 method: "DELETE"
+             });
+             const res = await req.json
+             console.log(res);
+
+            this.getHolidays();
+             //window.location="/";
+
+             ;
+         }
+
   },
   mounted(){
 
@@ -59,3 +74,9 @@
 };
 
 </script>
+
+<style scoped>
+.mx-auto{
+    text-align: justify;
+}
+</style>
